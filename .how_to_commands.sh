@@ -102,6 +102,7 @@ function __kubernetes_info() {
 
 function __sync_with_github_remote() {
   echo "Syncing with GitHub master"
+  git checkout master
   git pull origin master
 }
 
