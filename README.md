@@ -42,8 +42,11 @@ Enter the index:
 3) ibmcloud
 4) docker
 5) kubernetes
+6) GitHub Sync
 #? 1
 ```
+
+* Use option 6 to sync your local version with one from remote
 
 ## Note
 

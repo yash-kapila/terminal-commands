@@ -100,10 +100,16 @@ function __kubernetes_info() {
   echo
 }
 
+function __sync_with_github_remote() {
+  echo "Syncing with GitHub master"
+  git checkout master
+  git pull origin master
+}
+
 function howto() {
   echo "Enter the index:"
 
-  OPTIONS=("git" "unix" "ibmcloud" "docker" "kubernetes")
+  OPTIONS=("git" "unix" "ibmcloud" "docker" "kubernetes" "GitHub Sync")
 
   select option in "${OPTIONS[@]}";
   do
@@ -122,6 +128,9 @@ function howto() {
         ;;
       "kubernetes")
         __kubernetes_info
+        ;;
+      "GitHub Sync")
+        __sync_with_github_remote
         ;;
       *)
         echo "Err.. Incorrect option selected"
