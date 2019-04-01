@@ -108,7 +108,7 @@ function __sync_with_github_remote() {
 function howto() {
   echo "Enter the index:"
 
-  OPTIONS=("git" "unix" "ibmcloud" "docker" "kubernetes" "Github Sync")
+  OPTIONS=("git" "unix" "ibmcloud" "docker" "kubernetes" "GitHub Sync")
 
   select option in "${OPTIONS[@]}";
   do
@@ -128,7 +128,7 @@ function howto() {
       "kubernetes")
         __kubernetes_info
         ;;
-      "Github Sync")
+      "GitHub Sync")
         __sync_with_github_remote
         ;;
       *)
